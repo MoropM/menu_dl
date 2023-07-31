@@ -1,0 +1,20 @@
+@media screen and (min-width: 769px) {
+    // Tamanios
+    $w-aside: 20vw;
+    $w-content: calc(100vw - $w-aside);
+    .aside {
+        max-width: $w-aside;
+        &-title {
+            &--desk {
+                display: block;
+            }
+            &--mobile {
+                display: none;
+            }
+        }
+    }
+
+    .maincontent {
+        max-width: $w-content;
+    }
+}

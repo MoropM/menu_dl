@@ -1,0 +1,47 @@
+// font-family: 'Roboto', sans-serif;
+// font-family: 'Staatliches', cursive;
+
+// Fuentes
+$primaryFont: 'Roboto', sans-serif;
+
+// Tamanios
+$w-aside: 60vw;
+$w-content: calc(100vw - $w-aside);
+
+$paddingG: 1rem;
+
+$borderRadiusSeach: 5px;
+
+
+
+// Colors
+$bg-primary: white;
+$bg-primary-alternative: #d9d9d926;
+$primary-color: rgb(0, 95, 212);
+$text-color: #8b8b8b;
+$texth-color: #1a1a1a;
+$borderSearch: #ccc;
+$bg-input-color: #fff;
+$bg-avatar-color: #ccc;
+// CDark Colors
+$bg-dark-primary: #1a1a1a;
+$bg-dark-primary-alternative: #d9d9d926;
+$primary-dark-color: #fff;
+$text-dark-color: #acacac;
+$texth-dark-color: #fff;
+$borderSearch-dark: #1a1a1a;
+$bg-dark-input-color: #353535;
+$bg-dark-avatar-color: #353535;
+
+// Extensiones de disenio
+%style-input-button {
+    border: none;
+    padding: .5rem 0;
+    height: 38px;
+    color: var(--texth-color);
+    background-color: var(--background-input-color);
+    &:focus, &:focus-visible {
+        outline: 0;
+        box-shadow: none;
+    }
+}

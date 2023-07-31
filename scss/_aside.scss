@@ -1,0 +1,177 @@
+.aside {
+    background-color: var(--background-color);
+    width: 100%;
+    max-width: $w-aside;
+    height: 100vh;
+    padding: $paddingG;
+    box-shadow: 0px 0px 8px 1px rgba(0 0 0 / 35%);
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    overflow: auto;
+
+    // Encabezado
+    &-head {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: .7rem;
+    }
+    &-figure {
+        width: 50%;
+    }
+    &-title {
+        font-size: 2rem;
+        font-weight: 700;
+        color: var(--brand-text-color);
+        &--desk {
+            display: none;
+        }
+        &--mobile {
+            display: block;
+        }
+    }
+    &-menu {
+        i {
+            color: var(--texth-color);
+        }
+    }
+
+    // Cuerpo
+    &-optionslist {
+        list-style: none;
+        .sublist {
+            &-content{
+                display: none;
+            }
+        }
+    }
+    &-option {
+        position: relative;
+        padding: .7rem 0;
+        border-bottom: 1px solid var(--border-color);
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        &:first-child {
+            border: none;
+            padding-bottom: 0;
+        }
+
+        .content-search {
+            display: flex;
+            .search {
+                
+                &-input {
+                    width: calc(100% - 2rem);
+                    @extend %style-input-button;
+                    padding-left: .5rem;
+                    padding-right: .5rem;
+                    border-top-left-radius: $borderRadiusSeach;
+                    border-bottom-left-radius: $borderRadiusSeach;
+                    border-top: 1px solid var(--border-color);
+                    border-left: 1px solid var(--border-color);
+                    border-bottom: 1px solid var(--border-color);
+                    &::placeholder {
+                        color: var(--text-color);
+                    }
+                }
+                &-button {
+                    width: 2rem;
+                    @extend %style-input-button;
+                    border-top-right-radius: $borderRadiusSeach;
+                    border-bottom-right-radius: $borderRadiusSeach;
+                    border-top: 1px solid var(--border-color);
+                    border-right: 1px solid var(--border-color);
+                    border-bottom: 1px solid var(--border-color);
+                }
+            }
+        }
+        &-link {
+            width: 100%;
+            display: flex;
+            gap: .4rem;
+            padding: .7rem 0;
+            color: $text-color;
+            text-decoration: none;
+            
+            &:hover {
+                color: var(--texth-color);
+            }
+        }
+        
+
+        // Opcion activa
+        &.active {
+            &::before {
+                content: '';
+                display: block;
+                position: absolute;
+                width: 4px;
+                height: 1.8rem;
+                left: -15px;
+                top: 25%;
+                background-color: var(--brand-text-color);
+                border-top-right-radius: $borderRadiusSeach;
+                border-bottom-right-radius: $borderRadiusSeach;
+            }
+        }
+
+    }
+    &-counter {
+        background-color: rgb(237, 64, 64);
+        color: white;
+        width: 1.2rem;
+        height: 1.2rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        line-height: 0;
+        border-radius: 50%;
+        position: absolute;
+        right: 0;
+        font-size: 12px;
+        &--new {
+            width: auto;
+            padding: .3rem;
+            border-radius: 9px;
+            font-size: 10px;
+            background-color: rgb(64, 237, 127);
+        }
+    }
+
+    // Estilo de contenido del avatar
+    .avatar {
+        &-content {
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
+            gap: .5rem;
+            background-color: var(--background-avatar-color);
+            padding: .4rem;
+            border-radius: 2rem;
+            .picture {
+                // width: 50px;
+                &-image {
+                    // width: 100%;
+                    border-radius: 50%;
+                }
+            }
+        }
+        &-data {
+            &-name {
+                color: var(--texth-color);
+            }
+            &-mail {
+                color: var(--text-color);
+            }
+        }
+        &-moreinfo {
+            color: var(--text-color);
+            font-size: 1.5rem;
+        }
+    }
+}
+
+
