@@ -1,9 +1,11 @@
 @media screen and (min-width: 769px) {
     // Tamanios
-    $w-aside: 20vw;
+    $w-aside: 18rem;
     $w-content: calc(100vw - $w-aside);
     .aside {
+        width: 100%;
         max-width: $w-aside;
+        
         &-title {
             &--desk {
                 display: block;
@@ -12,9 +14,68 @@
                 display: none;
             }
         }
+
+        &-option {
+            &-link {
+                .link-name {
+                    // visibility: unset;
+                    animation: viewNameLink .3s ease both;
+                }
+            }
+        }
+
+        // Clase para ocultar el aside en dispositivos móviles
+        &.hidden {
+            width: 5.5rem;
+            max-width: initial;
+            .aside {
+                &-title {
+                    transition: all .5s;
+                    &--desk {
+                        display: none;
+                    }
+                    &--mobile {
+                        display: block;
+                    }
+                }
+                &-option {
+                    &-link {
+                        .link-name {
+                            // visibility: unset;
+                            animation: hidenNameLink .3s ease both;
+                        }
+                    }
+                    
+                    // Estilo de contenido del avatar
+                    .avatar {
+                        &-content {
+                            gap: 0;
+                        }
+                        &-data {
+                            &-name {
+                                animation: hiddenInfo .3s ease both;
+                            }
+                            &-mail {
+                                animation: hiddenInfo .3s ease both;
+                            }
+                        }
+                        &-moreinfo {
+                            animation: hiddenInfo .3s ease both;
+                        }
+                    }
+                    
+                }
+            }
+
+        }
     }
 
     .maincontent {
         max-width: $w-content;
+        &.asideh {
+            $w-aside: 5.5rem;
+            $w-content: calc(100vw - $w-aside);
+            max-width: $w-content;
+        }
     }
 }

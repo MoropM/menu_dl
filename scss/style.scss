@@ -11,6 +11,7 @@
     --background-color: #{$bg-primary};
     --background-artenative-color: #{$bg-primary-alternative};
     --text-color: #{$text-color};
+    --text-content-color: #{$textContent-color};
     --texth-color: #{$texth-color};
     --background-input-color: #{$bg-input-color};
     --brand-text-color: #{$primary-color};
@@ -21,6 +22,7 @@
       --background-color: #{$bg-dark-primary};
       --background-artenative-color: #{$bg-dark-primary-alternative};
       --text-color: #{$text-dark-color};
+      --text-content-color: #{$textContent-dark-color};
       --texth-color: #{$texth-dark-color};
       --background-input-color: #{$bg-dark-input-color};
       --brand-text-color: #{$primary-dark-color};
@@ -39,5 +41,6 @@ body {
 @import 'aside';
 @import 'content';
 @import 'querys';
+@import 'keyframe';
 
 // sass -w --style=compressed app.scss ../css/style.min.css

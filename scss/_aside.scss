@@ -1,7 +1,9 @@
 .aside {
     background-color: var(--background-color);
-    width: 100%;
-    max-width: $w-aside;
+    width: 5.5rem;
+    max-width: initial;
+    // width: 100%;
+    // max-width: $w-aside;
     height: 100vh;
     padding: $paddingG;
     box-shadow: 0px 0px 8px 1px rgba(0 0 0 / 35%);
@@ -10,6 +12,7 @@
     flex-direction: column;
     justify-content: space-between;
     overflow: auto;
+    transition: all .5s;
 
     // Encabezado
     &-head {
@@ -25,6 +28,7 @@
         font-size: 2rem;
         font-weight: 700;
         color: var(--brand-text-color);
+        transition: all .5s;
         &--desk {
             display: none;
         }
@@ -60,9 +64,9 @@
         }
 
         .content-search {
+            width: 100%;
             display: flex;
             .search {
-                
                 &-input {
                     width: calc(100% - 2rem);
                     @extend %style-input-button;
@@ -98,6 +102,11 @@
             
             &:hover {
                 color: var(--texth-color);
+            }
+
+            .link-name {
+                animation: hidenNameLink .3s ease both;
+                // visibility: hidden;
             }
         }
         
@@ -170,6 +179,24 @@
         &-moreinfo {
             color: var(--text-color);
             font-size: 1.5rem;
+        }
+    }
+
+
+    // Clase para agrandar el aside en dispositivos móviles
+    &.show {
+        width: 100%;
+        max-width: $w-aside;
+        transition: all .5s;
+        &::after {
+            content: '';
+            display: block;
+            background-color: rgba(0 0 0 / 35%);
+            position: absolute;
+            width: calc(100vw / 2);
+            height: 100%;
+            top: 0;
+            left: calc(100vw / 2);;
         }
     }
 }

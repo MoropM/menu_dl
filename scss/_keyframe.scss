@@ -1,0 +1,27 @@
+
+@keyframes hidenNameLink {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(-230%);
+    }
+}
+@keyframes viewNameLink {
+    0% {
+        transform: translateX(-50%);
+    }
+    100% {
+        transform: translateX(0);
+    }
+}
+
+@keyframes hiddenInfo {
+    0% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+        display: none;
+    }
+}

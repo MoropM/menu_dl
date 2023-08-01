@@ -1,7 +1,9 @@
 .maincontent {
     background-color: var(--background-artenative-color);
+    color: var(--text-content-color);
     width: 100%;
-    max-width: $w-content;
+    // max-width: $w-content;
+    max-width: calc(100vw - 5.5rem);
     height: 100vh;
     padding: $paddingG;
 }
