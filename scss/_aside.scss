@@ -1,3 +1,18 @@
+%btn_counter {
+    background-color: rgb(237, 64, 64);
+    color: white;
+    width: 1.2rem;
+    height: 1.2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    line-height: 0;
+    border-radius: 50%;
+    position: absolute;
+    right: 0;
+    font-size: 12px;
+}
+
 .aside {
     background-color: var(--background-color);
     width: 5.5rem;
@@ -128,19 +143,9 @@
         }
 
     }
+    
     &-counter {
-        background-color: rgb(237, 64, 64);
-        color: white;
-        width: 1.2rem;
-        height: 1.2rem;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        line-height: 0;
-        border-radius: 50%;
-        position: absolute;
-        right: 0;
-        font-size: 12px;
+        @extend %btn_counter;
         &--new {
             width: auto;
             padding: .3rem;
